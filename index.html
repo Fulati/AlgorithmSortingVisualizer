@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Algorithm Sorting Visualizer</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pixelify+Sans&family=Poppins:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Algorithm Sorting Visualizer</h1>
+
+      <nav>
+        <div class="controls">
+          <div class="slideContainer">
+            <p>Sort Speed</p>
+            <input
+              type="range"
+              min="1"
+              max="5"
+              value="3"
+              class="slider"
+              id="SortSpeed"
+            />
+            <p>Array Size</p>
+            <input
+              type="range"
+              min="10"
+              max="150"
+              value="80"
+              class="slider"
+              id="SortSize"
+            />
+          </div>
+
+          <div class="arrayButtons">
+            <button class="btn" id="sortPause">PAUSE</button>
+            <button class="btn" id="sortRandomize">RANDOMIZE</button>
+          </div>
+        </div>
+
+        <div class="sorts">
+          <button class="btn">Bubble Sort</button>
+          <button class="btn">Selection Sort</button>
+          <button class="btn">Insertion Sort</button>
+          <button class="btn">Merge Sort</button>
+          <button class="btn">Quick Sort</button>
+          <button class="btn">Heap Sort</button>
+        </div>
+        
+      </nav>
+    </header>
+
+  </body>
+</html>
