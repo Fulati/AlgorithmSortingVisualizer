@@ -1,7 +1,7 @@
 var speed = 500;
 
-var delayTime = 10000 / (Math.floor(barCountValue / 10) * speed); //Decrease numerator to increase speed.
-var totalDelay = 0; //This is updated ov every div change so that visualization is visible.
+var delayTime = 10000 / (Math.floor(barCountValue / 10) * speed); //how many milliseconds delay between each display of bars
+var totalDelay = 0; //Total delay
 
 //var isPaused = false;
 //inp_pause.disabled = true;
@@ -30,7 +30,7 @@ function visualizationSpeed() {
       break;
   }
 
-  delayTime = 10000 / (Math.floor(barCountValue / 10) * speed); //Decrease numerator to increase speed.
+  delayTime = 10000 / (Math.floor(barCountValue / 10) * speed); 
 }
 
 function visualizationAnimate(barContainer, height, color) {
