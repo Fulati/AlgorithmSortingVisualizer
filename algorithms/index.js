@@ -11,7 +11,6 @@ var barHeight = []; //represent the height of each bars
 var barMargin; //represent space between bars
 var barContainer = document.getElementById("barContainer"); //container that holds all the bars
 
-
 barRandomize.addEventListener("click", changeNumBars);
 barCount.addEventListener("input", changeNumBars);
 
@@ -40,6 +39,7 @@ function changeNumBars() {
 
 onload = changeNumBars();
 
+//Running the appropriate algorithm.
 for (var i = 0; i < sortButtons.length; i++) {
   sortButtons[i].addEventListener("click", runAlgorithm);
 }
