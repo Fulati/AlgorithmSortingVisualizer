@@ -2,6 +2,7 @@ var barSortSpeed = document.getElementById("sortSpeed");
 var barCount = document.getElementById("sortSize");
 var barCountValue = barCount.value;
 var barRandomize = document.getElementById("sortRandomize");
+var barSortPause = document.getElementById("sortPause");
 
 //All the sorting buttons
 var sortButtons = document.querySelectorAll(".sorts .btn");
@@ -14,6 +15,7 @@ var barContainer = document.getElementById("barContainer"); //container that hol
 barRandomize.addEventListener("click", changeNumBars);
 barCount.addEventListener("input", changeNumBars);
 
+//Create the bars
 function generateBars() {
   barContainer.innerHTML = "";
 
@@ -44,6 +46,7 @@ for (var i = 0; i < sortButtons.length; i++) {
   sortButtons[i].addEventListener("click", runAlgorithm);
 }
 
+//Disable the other sorting buttons so you cant switch mid sort
 function disableButtons() {
   for (var i = 0; i < sortButtons.length; i++) {
     sortButtons[i].classList = [];
@@ -54,7 +57,7 @@ function disableButtons() {
   barCount.disabled = true;
   barRandomize.disabled = true;
   barSortSpeed.disabled = true;
-  //inp_pause.disabled = false;
+  barSortPause.disabled = false;
 }
 
 function runAlgorithm() {

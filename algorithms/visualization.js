@@ -1,13 +1,14 @@
-var speed = 500;
+var speed = 200;
 
 var delayTime = 10000 / (Math.floor(barCountValue / 10) * speed); //how many milliseconds delay between each display of bars
 var totalDelay = 0; //Total delay
 
-//var isPaused = false;
-//inp_pause.disabled = true;
+var isPaused = false;
+barSortPause.disabled = true;
 
 barSortSpeed.addEventListener("input", visualizationSpeed);
-//inp_pause.addEventListener("click", pauseAnimation);
+barSortPause.addEventListener("click", pauseAnimation);
+
 
 function visualizationSpeed() {
   var sortingSpeed = barSortSpeed.value;
@@ -57,11 +58,12 @@ function enableButtons() {
     barCount.disabled = false;
     barRandomize.disabled = false;
     barSortSpeed.disabled = false;
-    //inp_pause.disabled = true;
+    barSortPause.disabled = true;
+    barSortPause.innerText = "PAUSE";
   }, (totalDelay += delayTime));
 }
 
-//function pauseAnimation(){
-//isPaused = !isPaused;
-//inp_pause.innerText = isPaused ? "PLAY" : "PAUSE";
-//}
+function pauseAnimation(){
+  isPaused = !isPaused;
+  barSortPause.innerText = isPaused ? "PLAY" : "PAUSE";
+}
