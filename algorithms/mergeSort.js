@@ -1,4 +1,4 @@
-function Merge() {
+function MergeSort() {
     totalDelay = 0;
   
     merge_partition(0, barCountValue - 1);

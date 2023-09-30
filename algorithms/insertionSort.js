@@ -1,4 +1,4 @@
-function Insertion() {
+function InsertionSort() {
   totalDelay = 0;
 
   for (var j = 0; j < barCountValue; j++) {

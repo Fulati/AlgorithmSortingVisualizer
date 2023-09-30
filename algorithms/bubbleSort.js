@@ -1,4 +1,4 @@
-function Bubble() {
+function BubbleSort() {
   totalDelay = 0;
 
   for (var i = 0; i < barCountValue - 1; i++) {

@@ -1,4 +1,4 @@
-function Heap() {
+function HeapSort() {
     totalDelay = 0;
   
     heap_sort();

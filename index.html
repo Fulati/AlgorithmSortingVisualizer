@@ -14,7 +14,6 @@
 
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
     <header>
       <h1>Algorithm Sorting Visualizer</h1>
 
@@ -25,8 +24,8 @@
             <input
               type="range"
               min="1"
-              max="5"
-              value="3"
+              max="12"
+              value="4"
               class="slider"
               id="sortSpeed"
             />
@@ -34,8 +33,8 @@
             <input
               type="range"
               min="10"
-              max="150"
-              value="80"
+              max="60"
+              value="20"
               class="slider"
               id="sortSize"
             />
@@ -54,6 +53,7 @@
           <button class="btn">Merge Sort</button>
           <button class="btn">Quick Sort</button>
           <button class="btn">Heap Sort</button>
+          <button class="btn">Counting Sort</button>
         </div>
       </nav>
     </header>
@@ -62,8 +62,17 @@
       <div id="barContainer"></div>
     </section>
 
+    <section class="countingSortContainer">
+      <div id="inputArray"></div>
+      <div id="countArray"></div>
+      <div id="numText"></div>
+      <div id="outputArray"></div>
+    </section>
+
     <script src="algorithms/index.js"></script>
-    <script src="algorithms/visualization.js"></script>
+    <script src="algorithms/visualization.js"></script>    
+    <script src="algorithms/countingSortVisualizer.js"></script>
+
 
     <script src="algorithms/bubbleSort.js"></script>
     <script src="algorithms/selectionSort.js"></script>
@@ -71,5 +80,6 @@
     <script src="algorithms/mergeSort.js"></script>
     <script src="algorithms/quickSort.js"></script>
     <script src="algorithms/heapSort.js"></script>
+    <script src="algorithms/countingSort.js"></script>
   </body>
 </html>

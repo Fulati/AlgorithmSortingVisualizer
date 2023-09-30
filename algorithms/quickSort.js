@@ -1,4 +1,4 @@
-function Quick() {
+function QuickSort() {
   totalDelay = 0;
 
   quick_sort(0, barCountValue - 1);

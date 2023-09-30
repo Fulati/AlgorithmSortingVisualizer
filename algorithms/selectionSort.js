@@ -1,4 +1,4 @@
-function Selection_sort() {
+function SelectionSort() {
   totalDelay = 0;
 
   for (var i = 0; i < barCountValue - 1; i++) {

@@ -21,7 +21,7 @@ function generateBars() {
 
   for (var i = 0; i < barCountValue; i++) {
     barHeight[i] =
-      Math.floor(Math.random() * 0.5 * (barCount.max - barCount.min)) + 10;
+      Math.floor(Math.random() * 1.5 * (barCount.max - barCount.min)) + 10;
     bars[i] = document.createElement("div");
     barContainer.appendChild(bars[i]);
 
@@ -35,7 +35,6 @@ function generateBars() {
 }
 
 function changeNumBars() {
-  barCountValue = barCount.value;
   generateBars();
 }
 
@@ -66,22 +65,25 @@ function runAlgorithm() {
   this.classList.add("selectedButton");
   switch (this.innerHTML) {
     case "Bubble Sort":
-      Bubble();
+      BubbleSort();
       break;
     case "Selection Sort":
-      Selection_sort();
+      SelectionSort();
       break;
     case "Insertion Sort":
-      Insertion();
+      InsertionSort();
       break;
     case "Merge Sort":
-      Merge();
+      MergeSort();
       break;
     case "Quick Sort":
-      Quick();
+      QuickSort();
       break;
     case "Heap Sort":
-      Heap();
+      HeapSort();
+      break;
+    case "Counting Sort":
+      CountingSort();
       break;
   }
 }
