@@ -81,18 +81,21 @@ function handleBarContainerVisibility() {
   if (selectedSortButton) {
     // Show the appropriate bar containers based on the selected sort algorithm
     const selectedAlgorithm = selectedSortButton.innerHTML;
+
     switch (selectedAlgorithm) {
       case "Counting Sort":
         // Show all four bar containers for Counting Sort
-          containers[0].style.display = "none";
-          containers[1].style.display = "flex";
-          containers[2].style.display = "flex";
-          containers[3].style.display = "flex";
-          containers[4].style.display = "flex";
+        generateInputArray();
+        containers[0].style.display = "none";
+        containers[1].style.display = "flex";
+        containers[2].style.display = "flex";
+        containers[3].style.display = "flex";
+        containers[4].style.display = "flex";
 
         break;
       default:
         // Show only the first bar container for other algorithms
+        generateBars();
         containers[0].style.display = "flex";
         containers[1].style.display = "none";
         containers[2].style.display = "none";
