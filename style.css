@@ -75,11 +75,12 @@ nav {
 }
 
 .selectedButton {
-  background-color: #787878;
+  background-color: #9b9b9b;
+  box-shadow: 0px 3px black;
 }
 
 #barContainer {
-  display: flex;
+  display: none;
   width: 100%;
   height: 70vh;
   max-width: 90%;
@@ -95,7 +96,7 @@ nav {
 }
 
 #inputArray, #countArray, #outputArray{
-  display: flex;
+  display: none;
   width: 100%;
   height: 20vh;
   max-width: 50%;
@@ -105,7 +106,7 @@ nav {
 }
 
 #numText {
-  display: flex; 
+  display: none; 
   width: 100%;
   max-width: 50%;
   margin-top: -40px; 

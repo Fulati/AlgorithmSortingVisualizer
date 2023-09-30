@@ -5,11 +5,10 @@ var totalDelay = 0; //Total delay
 var elapsedTime = 0;
 let temp = 0;
 
-var isPaused = false;
-barSortPause.disabled = true;
+var isPaused = true;
 
 barSortSpeed.addEventListener("input", visualizationSpeed);
-barSortPause.addEventListener("click", toggleAnimation);
+barSortPlay.addEventListener("click", toggleAnimation);
 
 
 function visualizationSpeed() {
@@ -59,7 +58,7 @@ function visualizationSpeed() {
 
 function toggleAnimation(){
   isPaused = !isPaused;
-  barSortPause.innerText = isPaused ? "PLAY" : "PAUSE";
+  barSortPlay.innerText = isPaused ? "PLAY" : "PAUSE";
 }
 
 function visualizationAnimate(barContainer, height, color) {
@@ -75,19 +74,4 @@ function visualizationAnimate(barContainer, height, color) {
   , (totalDelay += delayTime));
 }
 
-function enableButtons() {
-  setTimeout(function () {
-    for (var i = 0; i < sortButtons.length; i++) {
-      sortButtons[i].classList = [];
-      sortButtons[i].classList.add("unselectedButton");
-
-      sortButtons[i].disabled = false;
-    }
-    barCount.disabled = false;
-    barRandomize.disabled = false;
-    barSortSpeed.disabled = false;
-    barSortPause.disabled = true;
-    barSortPause.innerText = "PAUSE";
-  }, (totalDelay += delayTime));
-}
 
