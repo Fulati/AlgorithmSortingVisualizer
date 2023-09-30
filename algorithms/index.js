@@ -12,8 +12,27 @@ var barHeight = []; //represent the height of each bars
 var barMargin; //represent space between bars
 var barContainer = document.getElementById("barContainer"); //container that holds all the bars
 
-barRandomize.addEventListener("click", changeNumBars);
+barRandomize.addEventListener("click", resetProgram);
 barCount.addEventListener("input", changeNumBars);
+
+
+function resetProgram() {
+  // Reset all variables and containers to their initial state
+  barCountValue = barCount.value;
+  bars = [];
+  barHeight = [];
+  barMargin = 0.1;
+  barContainer.innerHTML = "";
+  totalDelay = 0;
+  selectedSortButton = null;
+
+  // Enable buttons and set initial display
+  enableButtons();
+  generateBars();
+  handleBarContainerVisibility();
+}
+
+
 
 //Create the bars
 function generateBars() {
@@ -50,7 +69,7 @@ function disableButtons() {
     sortButtons[i].disabled = true;
   }
   barCount.disabled = true;
-  barRandomize.disabled = true;
+  //barRandomize.disabled = true;
   barSortSpeed.disabled = true;
   barSortPlay.disabled = true;
 }
@@ -65,7 +84,7 @@ function enableButtons() {
       sortButtons[i].disabled = false;
     }
     barCount.disabled = false;
-    barRandomize.disabled = false;
+    //barRandomize.disabled = false;
     barSortSpeed.disabled = false;
     barSortPlay.disabled = false;    
   }, (totalDelay += delayTime));

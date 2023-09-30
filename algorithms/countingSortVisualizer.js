@@ -26,6 +26,23 @@ onload = () => {
     generateOutputArray();
 }
 
+
+function resetProgram() {
+    // Reset all variables and containers to their initial state
+    barCountValue = barCount.value;
+    inputArrays = [];
+    inputHeight = [];
+    arrayMargin = 0.1;
+    inputArray.innerHTML = "";
+    totalDelay = 0;
+    selectedSortButton = null;
+  
+    // Enable buttons and set initial display
+    enableButtons();
+    generateInputArray();
+    handleBarContainerVisibility();
+  }
+
   
 //Create the bars for the CountingSort
 function generateInputArray() {
