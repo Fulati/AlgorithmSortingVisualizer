@@ -96,7 +96,7 @@ nav {
 }
 
 #inputArray, #countArray, #outputArray{
-  display: none;
+  display: flex;
   width: 100%;
   height: 20vh;
   max-width: 50%;
@@ -106,7 +106,7 @@ nav {
 }
 
 #numText {
-  display: none; 
+  display: flex; 
   width: 100%;
   max-width: 50%;
   margin-top: -40px; 

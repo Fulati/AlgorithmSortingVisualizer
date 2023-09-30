@@ -12,7 +12,7 @@ var countArray = document.getElementById('countArray');
 var outputArray = document.getElementById('outputArray');
 var numText = document.getElementById('numText');
 
-barRandomize.addEventListener("click", changeNumArrays);
+barRandomize.addEventListener("click", resetProgram);
 barCount.addEventListener("input", changeNumArrays);
 
 function changeNumArrays() {
@@ -24,6 +24,7 @@ onload = () => {
     changeNumArrays()
     generateCountArray();
     generateOutputArray();
+
 }
 
 
@@ -31,15 +32,25 @@ function resetProgram() {
     // Reset all variables and containers to their initial state
     barCountValue = barCount.value;
     inputArrays = [];
+    countArrays = [];
+    outputArrays = [];
+
     inputHeight = [];
+    countHeight = []; 
+    outputHeight = []; 
+
     arrayMargin = 0.1;
     inputArray.innerHTML = "";
+    countArray.innerHTML = "";
+    outputArray.innerHTML = "";
     totalDelay = 0;
     selectedSortButton = null;
   
     // Enable buttons and set initial display
     enableButtons();
     generateInputArray();
+    generateCountArray()
+    generateOutputArray()
     handleBarContainerVisibility();
   }
 
@@ -70,10 +81,10 @@ function generateCountArray() {
     countArray.innerHTML = "";
     numText.innerHTML = "";
 
-    countHeight = Array(10).fill(0);
+    countHeight = Array(11).fill(0);
   
     for (var i = 1; i < 11; i++) {
-        countHeight[i] = i * 10;
+        //countHeight[i] = i * 10;  used while testing
 
         countArrays[i] = document.createElement("div");
         countArray.appendChild(countArrays[i]);
