@@ -52,6 +52,7 @@ function disableButtons() {
   barCount.disabled = true;
   barRandomize.disabled = true;
   barSortSpeed.disabled = true;
+  barSortPlay.disabled = true;
 }
 
 
@@ -66,7 +67,7 @@ function enableButtons() {
     barCount.disabled = false;
     barRandomize.disabled = false;
     barSortSpeed.disabled = false;
-    barSortPlay.innerText = "PLAY";
+    barSortPlay.disabled = false;    
   }, (totalDelay += delayTime));
 }
 
@@ -119,9 +120,6 @@ for (var i = 0; i < sortButtons.length; i++) {
     // Select the clicked button
     this.classList.add("selectedButton");
     selectedSortButton = this;
-
-    // Enable the barSortPlay button
-    barSortPlay.disabled = false;
 
     // Handle bar container visibility
     handleBarContainerVisibility()

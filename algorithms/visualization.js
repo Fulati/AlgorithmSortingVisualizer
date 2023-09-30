@@ -8,7 +8,7 @@ let temp = 0;
 var isPaused = true;
 
 barSortSpeed.addEventListener("input", visualizationSpeed);
-barSortPlay.addEventListener("click", toggleAnimation);
+//barSortPlay.addEventListener("click", toggleAnimation);
 
 
 function visualizationSpeed() {
@@ -56,10 +56,10 @@ function visualizationSpeed() {
   delayTime = 10000 / (Math.floor(barCountValue / 10) * speed); 
 }
 
-function toggleAnimation(){
-  isPaused = !isPaused;
-  barSortPlay.innerText = isPaused ? "PLAY" : "PAUSE";
-}
+// function toggleAnimation(){
+//   isPaused = !isPaused;
+//   barSortPlay.innerText = isPaused ? "PLAY" : "PAUSE";
+// }
 
 function visualizationAnimate(barContainer, height, color) {
 
