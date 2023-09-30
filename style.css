@@ -149,5 +149,8 @@ nav {
 .sliderContainer {
   margin-right: 20px;
   margin-top: -30px;
-  margin-bottom: -10px;
+}
+
+.CountSortSize{
+  display: none;
 }

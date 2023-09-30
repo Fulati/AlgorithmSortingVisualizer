@@ -54,6 +54,7 @@ function generateBars() {
 }
 
 function changeNumBars() {
+  barCountValue = barCount.value;
   generateBars();
 }
 
@@ -107,20 +108,28 @@ function handleBarContainerVisibility() {
         // Show all four bar containers for Counting Sort
         generateInputArray();
         containers[0].style.display = "none";
+        barCount.style.display = "none";
+
         containers[1].style.display = "flex";
         containers[2].style.display = "flex";
         containers[3].style.display = "flex";
         containers[4].style.display = "flex";
-
+        countSortSize.style.display = "flex";
+        countSortSize.style.marginTop = "7px";
         break;
+
       default:
         // Show only the first bar container for other algorithms
         generateBars();
         containers[0].style.display = "flex";
+        barCount.style.display = "flex";
+        barCount.style.marginTop = "7px";
+
         containers[1].style.display = "none";
         containers[2].style.display = "none";
         containers[3].style.display = "none";
         containers[4].style.display = "none";
+        countSortSize.style.display = "none";
         break;
     }
   }
