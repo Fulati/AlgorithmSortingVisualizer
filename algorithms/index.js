@@ -40,7 +40,7 @@ function generateBars() {
 
   for (var i = 0; i < barCountValue; i++) {
     barHeight[i] =
-      Math.floor(Math.random() * 1.5 * (barCount.max - barCount.min)) + 10;
+      Math.floor(Math.random() * (barCount.max - barCount.min)) + 10;
     bars[i] = document.createElement("div");
     barContainer.appendChild(bars[i]);
 
