@@ -16,7 +16,7 @@ function visualizationSpeed() {
 
   switch (parseInt(sortingSpeed)) {
     case 1:
-      speed = 2;
+      speed = 5;
       break;
     case 2:
       speed = 10;

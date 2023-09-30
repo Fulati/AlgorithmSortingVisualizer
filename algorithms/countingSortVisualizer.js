@@ -12,7 +12,7 @@ var countArray = document.getElementById('countArray');
 var outputArray = document.getElementById('outputArray');
 var numText = document.getElementById('numText');
 
-barRandomize.addEventListener("click", resetProgram);
+barRandomize.addEventListener("click", resetCountSort);
 barCount.addEventListener("input", changeNumArrays);
 
 function changeNumArrays() {
@@ -28,7 +28,7 @@ onload = () => {
 }
 
 
-function resetProgram() {
+function resetCountSort() {
     // Reset all variables and containers to their initial state
     barCountValue = barCount.value;
     inputArrays = [];
@@ -61,7 +61,7 @@ function generateInputArray() {
   
     for (var i = 0; i < barCountValue; i++) {
         inputHeight[i] =
-        Math.floor(Math.random() * 11) + 1;
+        Math.floor(Math.random() * 10) + 1;
 
         inputArrays[i] = document.createElement("div");
         inputArray.appendChild(inputArrays[i]);
@@ -83,7 +83,7 @@ function generateCountArray() {
 
     countHeight = Array(11).fill(0);
   
-    for (var i = 1; i < 11; i++) {
+    for (var i = 1; i < countHeight.length; i++) {
         //countHeight[i] = i * 10;  used while testing
 
         countArrays[i] = document.createElement("div");
@@ -93,7 +93,7 @@ function generateCountArray() {
 
         countArrays[i].style =
             "margin-right:5px; width:100%; height: " +
-            countHeight[i] +
+            countHeight[i]+
             "%; background-color:#717f8e;" +
             "align-self: flex-end;";
 
@@ -112,7 +112,7 @@ function generateOutputArray() {
   
     for (var i = 0; i < barCountValue; i++) {
         outputHeight[i] =
-        Math.floor(Math.random() * 11) + 1;
+        Math.floor(Math.random() * 10) + 1;
 
         outputArrays[i] = document.createElement("div");
         outputArray.appendChild(outputArrays[i]);
