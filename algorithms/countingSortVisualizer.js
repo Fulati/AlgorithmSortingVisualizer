@@ -12,11 +12,14 @@ var countArray = document.getElementById('countArray');
 var outputArray = document.getElementById('outputArray');
 var numText = document.getElementById('numText');
 
+var countSortSize = document.getElementById("CountSortSize");
+var countSortSizeValue = countSortSize.value;
+
 barRandomize.addEventListener("click", resetCountSort);
-barCount.addEventListener("input", changeNumArrays);
+countSortSize.addEventListener("input", changeNumArrays);
 
 function changeNumArrays() {
-    barCountValue = barCount.value;
+    countSortSizeValue = countSortSize.value;
     generateInputArray();
 }
 
@@ -24,13 +27,11 @@ onload = () => {
     changeNumArrays()
     generateCountArray();
     generateOutputArray();
-
 }
-
 
 function resetCountSort() {
     // Reset all variables and containers to their initial state
-    barCountValue = barCount.value;
+    countSortSizeValue = countSortSize.value;
     inputArrays = [];
     countArrays = [];
     outputArrays = [];
@@ -59,7 +60,7 @@ function resetCountSort() {
 function generateInputArray() {
     inputArray.innerHTML = "";
   
-    for (var i = 0; i < barCountValue; i++) {
+    for (var i = 0; i < countSortSizeValue; i++) {
         inputHeight[i] =
         Math.floor(Math.random() * 10) + 1;
 
@@ -110,7 +111,7 @@ function generateCountArray() {
 function generateOutputArray() {
     outputArray.innerHTML = "";
   
-    for (var i = 0; i < barCountValue; i++) {
+    for (var i = 0; i < countSortSizeValue; i++) {
         outputHeight[i] =
         Math.floor(Math.random() * 10) + 1;
 

@@ -35,10 +35,6 @@ nav {
   align-items: center;
 }
 
-.slideContainer {
-  margin-right: 20px;
-}
-
 .arrayButtons button {
   margin-left: 50px;
 }
@@ -150,3 +146,8 @@ nav {
   cursor: pointer;
 }
 
+.sliderContainer {
+  margin-right: 20px;
+  margin-top: -30px;
+  margin-bottom: -10px;
+}
