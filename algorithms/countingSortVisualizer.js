@@ -112,9 +112,6 @@ function generateOutputArray() {
     outputArray.innerHTML = "";
   
     for (var i = 0; i < countSortSizeValue; i++) {
-        outputHeight[i] =
-        Math.floor(Math.random() * 10) + 1;
-
         outputArrays[i] = document.createElement("div");
         outputArray.appendChild(outputArrays[i]);
   
